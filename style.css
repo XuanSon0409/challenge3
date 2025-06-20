@@ -15,6 +15,10 @@ body {
     margin: 89px 263px;
 }
 
+input:focus-visible{
+    border-color: #854DFF !important;
+}
+
 .age-calculator {
     background-color: #fff;
     padding: 56px 56px 70px;
