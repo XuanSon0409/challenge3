@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f0f0f0;
     display: flex;
     align-items: center;
@@ -60,6 +60,11 @@ body {
     color: #716F6F;
 }
 
+.input-group input:focus,
+.input-group input:hover {
+    border-color: #854DFF;
+}
+
 .calculate-btn {
     background-color: #854dff;
     border: none;
@@ -75,10 +80,20 @@ body {
     cursor: pointer;
 }
 
+.calculate-btn:hover {
+    background-color: #000;
+    /* chuyển sang đen khi hover */
+}
+
 .arrow-icon {
     font-size: 2rem;
     color: white;
+    width: 100%;
+    max-width: 46px;
+    height: auto;
 }
+
+
 
 .result-section {
     margin-top: 3rem;
@@ -96,6 +111,13 @@ body {
     font-size: 96px;
     font-weight: 400;
     line-height: 105.6px;
+    transition: font-weight 0.3s ease;
+    width: 50px;
+}
+
+.result-section .value.active {
+    font-weight: 700;
+    /* đậm khi có dữ liệu */
 }
 
 
@@ -103,20 +125,23 @@ body {
 @media (max-width: 500px) {
     body {
         padding: 1rem;
+        margin: 0;
     }
 
     .age-calculator {
-        padding: 1.5rem;
-        border-radius: 20px 20px 60px 20px;
+
+        border-radius: 24px 24px 88px 24px;
         max-width: 100%;
         width: 100%;
+        padding: 52px 24px;
+        height: 473px;
     }
 
     .input-section {
         display: flex;
-        flex-direction: column;
-        gap: 1.2rem;
+        gap: 16px;
         position: relative;
+        padding-bottom: 64px;
     }
 
     .input-group {
@@ -124,20 +149,27 @@ body {
     }
 
     .input-group label {
-        font-size: 0.75rem;
-        color: #777;
+        /* font-size: 0.75rem; */
+        /* color: #716F6F; */
         text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-bottom: 0.4rem;
+        /* letter-spacing: 2px; */
+        margin-bottom: 4px;
     }
 
     .input-group input {
+        max-width: 96px;
+        height: 54px;
         width: 100%;
         padding: 0.8rem;
-        font-size: 1.1rem;
+        font-size: 20px;
         font-weight: 700;
-        border: 1px solid #ddd;
-        border-radius: 10px;
+        /* border: 1px solid #ddd; */
+        border-radius: 8px;
+    }
+
+    .input-group input:focus,
+    .input-group input:hover {
+        border-color: #854DFF;
     }
 
     .calculate-btn {
@@ -148,6 +180,14 @@ body {
         padding: 1rem;
         cursor: pointer;
         margin-top: 1rem;
+        width: 64px;
+        height: 64px;
+        bottom: -32px;
+    }
+
+    .calculate-btn:hover {
+        background-color: #000;
+        /* chuyển sang đen khi hover */
     }
 
     .arrow-icon {
@@ -155,22 +195,31 @@ body {
         color: white;
     }
 
+    .arrow-icon img {
+        width: 25px;
+        height: 25px;
+    }
+
     .result-section {
         margin-top: 2rem;
     }
 
     .result-section p {
-        font-size: 2rem;
-        font-weight: 800;
-        line-height: 1.4;
+        width: 154px;
+        height: 58px;
+        font-size: 52px;
+        font-weight: 700;
+        /* line-height: 57.2px; */
         display: flex;
-        gap: 0.5rem;
+        /* gap: 10px; */
     }
 
     .result-section .value {
         color: #854dff;
         min-width: 2ch;
-        display: inline-block;
-        text-align: right;
+        /* display: inline-block; */
+        /* text-align: right; */
+        font-size: 52px;
+
     }
 }
