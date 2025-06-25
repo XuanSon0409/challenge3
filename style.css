@@ -11,10 +11,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 89px 263px 88px;
+    min-height: 100vh;
+    margin: 89px 263px;
 }
 
-input:focus-visible {
+input:focus-visible{
     border-color: #854DFF !important;
 }
 
@@ -54,13 +55,12 @@ input:focus-visible {
 }
 
 .input-group input {
-    padding: 25px 85px 25px 16px;
+    padding: 1.3rem;
     border: 1px solid #DBDBDB;
     border-radius: 8px;
     font-size: 16px;
     font-weight: 700;
     width: 160px;
-    height: 70px;
     color: #716F6F;
 }
 
@@ -86,6 +86,7 @@ input:focus-visible {
 
 .calculate-btn:hover {
     background-color: #000;
+    /* chuyển sang đen khi hover */
 }
 
 .arrow-icon {
@@ -99,49 +100,35 @@ input:focus-visible {
 
 
 .result-section {
-    margin: 0;
+    margin-top: 3rem;
 }
 
 .result-section p {
     font-size: 96px;
     font-weight: 700;
     line-height: 105.6px;
-    display: inline-block;
-    width: auto;
-    height: 105px;
 }
 
 .result-section .value {
     color: #854DFF;
+    margin-right: 19px;
     font-size: 96px;
     font-weight: 400;
     line-height: 105.6px;
-    display: inline-block;
-    width: auto;
-    height: 106px;
-    margin-right: 19px;
-
+    transition: font-weight 0.3s ease;
+    width: 50px;
 }
 
 .result-section .value.active {
     font-weight: 700;
-    margin-right: 0;
-    min-width: 2ch;
-}
-
-.result-section .value img {
-    width: 110px;
-    height: 106px;
-    position: relative;
-    top: 24px;
-
+    /* đậm khi có dữ liệu */
 }
 
 
 /* Mobile responsive */
 @media (max-width: 500px) {
     body {
-        padding: 164px 16px 163px;
+        padding: 1rem;
         margin: 0;
     }
 
@@ -166,10 +153,10 @@ input:focus-visible {
     }
 
     .input-group label {
-        font-size: 14px;
-        color: #716F6F;
+        /* font-size: 0.75rem; */
+        /* color: #716F6F; */
         text-transform: uppercase;
-        letter-spacing: 2.1px;
+        /* letter-spacing: 2px; */
         margin-bottom: 4px;
     }
 
@@ -177,10 +164,10 @@ input:focus-visible {
         max-width: 96px;
         height: 54px;
         width: 100%;
-        padding: 17px 12px;
+        padding: 0.8rem;
         font-size: 20px;
         font-weight: 700;
-        border: 1px solid #716F6F;
+        /* border: 1px solid #ddd; */
         border-radius: 8px;
     }
 
@@ -204,6 +191,7 @@ input:focus-visible {
 
     .calculate-btn:hover {
         background-color: #000;
+        /* chuyển sang đen khi hover */
     }
 
     .arrow-icon {
@@ -225,14 +213,13 @@ input:focus-visible {
         height: 58px;
         font-size: 52px;
         font-weight: 700;
-        line-height: 57.2px;
+        /* line-height: 57.2px; */
         display: flex;
-        gap: 10px;
+        /* gap: 10px; */
     }
 
     .result-section .value {
         color: #854dff;
-        line-height: 57.2px;
         min-width: 2ch;
         /* display: inline-block; */
         /* text-align: right; */
